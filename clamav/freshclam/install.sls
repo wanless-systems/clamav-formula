@@ -16,3 +16,4 @@ freshclam_pkg:
   file.directory:
     - makedirs: true
     - user: {{clamav.clamd.config.User}}
+{% endif %}
