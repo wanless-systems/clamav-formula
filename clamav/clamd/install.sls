@@ -10,3 +10,9 @@ clamd_pkg:
 {%- for pkg in clamd.pkgs %}
       - {{ pkg }}
 {%- endfor %}
+
+/var/lib/clamav:
+  file.directory:
+    - group: virusgroup
+    - user: {{clamav.clamd.config.User}}
+    - mode: 775
