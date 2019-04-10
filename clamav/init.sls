@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
-
-{% if (clamav.log_folder is defined) %}
+{%- from "clamav/map.jinja" import clamav with context %}
+{% if clamav.log_folder is defined %}
 {{clamav.log_folder}}:
   file.directory:
     - makedirs: true
