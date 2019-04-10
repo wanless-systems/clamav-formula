@@ -26,3 +26,7 @@ freshclam_pkg:
   file.directory:
     - group: virusgroup
     - mode: 775
+
+
+freshclam /etc/freshclam.conf:
+  cmd.run
