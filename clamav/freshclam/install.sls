@@ -10,3 +10,9 @@ freshclam_pkg:
 {%- for pkg in freshclam.pkgs %}
       - {{ pkg }}
 {%- endfor %}
+
+{% if (clamav.freshclam.config.UpdateLogFile is defined) and clamav.freshclam.config.UpdateLogFile is defined %}
+{{clamav.freshclam.config.UpdateLogFile}}:
+  file.directory:
+    - makedirs: true
+    - user: {{clamav.clamd.config.User}}
