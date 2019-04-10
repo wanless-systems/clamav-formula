@@ -24,5 +24,5 @@ freshclam_pkg:
 
 /var/log/clamav:
   file.directory:
-    group: virusgroup
-    mode: 775
+    - group: virusgroup
+    - mode: 775
