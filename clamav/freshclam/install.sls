@@ -25,6 +25,7 @@ freshclam_pkg:
 /var/log/clamav:
   file.directory:
     - group: virusgroup
+    - user: {{clamav.clamd.config.User}}
     - mode: 775
 
 
