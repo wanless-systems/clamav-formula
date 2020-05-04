@@ -12,7 +12,7 @@ include:
 # early and therefore fails to start the service.
 clamd_service_override:
   file.managed:
-    - name: '/etc/systemd/system/{{ clamd.service_name }}.d/override.conf'
+    - name: '/etc/systemd/system/{{ clamd.service_name }}.service.d/override.conf'
     - source: 'salt://clamav/files/systemd-clamd-scan-override.conf'
     - user: root
     - group: root
