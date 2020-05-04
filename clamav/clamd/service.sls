@@ -17,6 +17,7 @@ clamd_service_override:
     - user: root
     - group: root
     - mode: 0644
+    - makedirs: true
 
 clamd_daemon:
   service.{{ clamd.service_state }}:
